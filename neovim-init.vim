@@ -63,9 +63,9 @@ let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 
 " highlight Normal guibg=none
-" set termguicolors
-" let g:gruvbox_italic=1
-" colorscheme gruvbox
+set termguicolors
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
@@ -86,6 +86,11 @@ nmap <leader>tj :call GotoBuffer(0)<CR>
 nmap <leader>tk :call GotoBuffer(1)<CR>
 nmap <leader>tl :call GotoBuffer(2)<CR>
 nmap <leader>t; :call GotoBuffer(3)<CR>
+
+" Fugitive remaps (For git integration)
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
 
 " Syntastic settings
 set statusline+=%#warningmsg#
