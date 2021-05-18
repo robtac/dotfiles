@@ -56,6 +56,7 @@ Plug 'theprimeagen/vim-be-good'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-obsession'
 call plug#end()
 
 " NERDCommenter Settings
@@ -88,8 +89,9 @@ nmap <leader>tl :call GotoBuffer(2)<CR>
 nmap <leader>t; :call GotoBuffer(3)<CR>
 
 " Fugitive remaps (For git integration)
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
+" nmap <leader>gl :diffget //3<CR>
+" nmap <leader>gh :diffget //2<CR>
+nmap <leader>gl :Git log<CR>
 nmap <leader>gs :G<CR>
 
 " Syntastic settings

@@ -104,6 +104,7 @@ alias v="vi"
 alias zshconfig="vi ~/.zshrc"
 alias open="xdg-open"
 alias vimconfig="vi ~/.config/nvim/init.vim"
+alias gw="git worktree"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # >>> conda initialize >>>
