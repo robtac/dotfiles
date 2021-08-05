@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/robbie/.oh-my-zsh"
+export ZSH="/home/robert/.oh-my-zsh"
 
 # Path to conda
 # export PATH="/home/robbie/anaconda3/bin:$PATH"  # commented out by conda initialize
@@ -43,7 +43,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -105,18 +105,22 @@ alias zshconfig="vi ~/.zshrc"
 alias open="xdg-open"
 alias vimconfig="vi ~/.config/nvim/init.vim"
 alias gw="git worktree"
+alias s="spotui"
+alias b="bashtop"
+alias f="fuck"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.localrc
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/robbie/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/robert/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/robbie/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/robbie/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/robert/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/robert/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/robbie/anaconda3/bin:$PATH"
+        export PATH="/home/robert/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -126,9 +130,18 @@ unset __conda_setup
 bindkey -v
 
 # Enable for kitty
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+# kitty + complete setup zsh | source /dev/stdin
 # Export editor
 export EDITOR="nvim"
+
+# Fzf configs
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_TMUX=1
+
+# Nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

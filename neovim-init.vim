@@ -39,6 +39,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Color theme
 Plug 'gruvbox-community/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -57,6 +58,8 @@ Plug 'dbeniamine/cheat.sh-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-obsession'
+" Write with sudo permissions
+Plug 'lambdalisue/suda.vim'
 call plug#end()
 
 " NERDCommenter Settings
@@ -64,9 +67,10 @@ let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 
 " highlight Normal guibg=none
-set termguicolors
-let g:gruvbox_italic=1
-colorscheme gruvbox
+" set termguicolors
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
+colorscheme nord
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
@@ -117,14 +121,4 @@ nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-
-augroup SOLDEUS
-    autocmd!
-    autocmd BufWritePre * :call TrimWhitespace()
-augroup END
-
+au BufNewFile,BufRead Jenkinsfile setf groovy
