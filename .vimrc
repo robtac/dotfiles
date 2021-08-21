@@ -20,6 +20,7 @@ set incsearch
 set scrolloff=8
 set colorcolumn=80
 set signcolumn=yes
+set nohlsearch
 
 " Give more space for displaying messages
 set cmdheight=1
@@ -36,3 +37,8 @@ vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
 au BufNewFile,BufRead Jenkinsfile setf groovy
+
+" Set true colors
+if (has("termguicolors"))
+    set termguicolors
+endif

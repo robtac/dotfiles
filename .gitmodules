@@ -1,0 +1,6 @@
+[submodule ".config/awesome/themes/ayu"]
+	path = .config/awesome/themes/ayu
+	url = https://github.com/MArpogaus/awesome-ayu.git
+[submodule ".config/awesome/vicious"]
+	path = .config/awesome/vicious
+	url = https://github.com/vicious-widgets/vicious.git

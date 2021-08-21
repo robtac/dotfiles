@@ -11,7 +11,6 @@ require('telescope').setup{
     defaults = {
         file_sorter = sorters.get_fzy_sorter,
         file_previewer = previewers.vim_buffer_cat.new,
-        path_display = {"shorten"},
         mappings = {
             i = {
                 ["<esc>"] = actions.close,

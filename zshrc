@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/robert/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Path to conda
 # export PATH="/home/robbie/anaconda3/bin:$PATH"  # commented out by conda initialize
@@ -127,7 +127,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Enable vim mode in console
-bindkey -v
+# bindkey -v
 
 # Enable for kitty
 # autoload -Uz compinit
@@ -138,10 +138,17 @@ bindkey -v
 export EDITOR="nvim"
 
 # Fzf configs
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 export FZF_TMUX=1
 
 # Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Export ~/.config as config home
+# export XDG_CONFIG_HOME="~/.config"
+
+# Enable hidden files in search
+export  FZF_DEFAULT_COMMAND='find .'

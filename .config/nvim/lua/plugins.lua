@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
 
     -- Color theme
     use 'arcticicestudio/nord-vim'
+    use 'drewtempelmeyer/palenight.vim'
 
     -- Sudo perms
     use 'lambdalisue/suda.vim'
