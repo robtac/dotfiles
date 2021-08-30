@@ -35,8 +35,8 @@ module.color_scheme = 'mirage'
 module.widgets_arg = {
     weather = {
         -- city and app id for the weather widget
-        city_id = 'change_me',
-        app_id = 'change_me'
+        city_id = '4951281',
+        app_id = 'b2bf5e2c19a7ca7d988b1b233b624fcd'
     },
     temp = {
         -- set resource for temperature widget
@@ -44,7 +44,7 @@ module.widgets_arg = {
     },
     net = {
         -- network interface
-        interface = 'change_me'
+        interface = 'enp5s0'
     }
 }
 
