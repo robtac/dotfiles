@@ -93,6 +93,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/robbie/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["palenight.vim"] = {
+    loaded = true,
+    path = "/home/robbie/.local/share/nvim/site/pack/packer/start/palenight.vim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/robbie/.local/share/nvim/site/pack/packer/start/plenary.nvim"

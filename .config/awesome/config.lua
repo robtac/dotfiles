@@ -2,7 +2,7 @@ local module = {}
 
 -- [ appearance ] --------------------------------------------------------------
 -- Load color schemes from xresources
-module.xresources = false
+module.xresources = true
 
 -- color scheme to use, choose from: light, mirage, dark
 module.color_scheme = 'mirage'

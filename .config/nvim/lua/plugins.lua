@@ -30,6 +30,9 @@ return require('packer').startup(function(use)
     -- Autocomplete
     use 'nvim-lua/completion-nvim'
 
+    -- Language specific
+    use 'lervag/vimtex'
+
     -- Async
     use 'tpope/vim-dispatch'
 
