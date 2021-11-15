@@ -140,6 +140,10 @@ _G.packer_plugins = {
   ["vim-surround"] = {
     loaded = true,
     path = "/home/robbie/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/robbie/.local/share/nvim/site/pack/packer/start/vimtex"
   }
 }
 
