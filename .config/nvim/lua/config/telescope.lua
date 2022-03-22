@@ -35,6 +35,12 @@ local set_keymap = vim.api.nvim_set_keymap
 set_keymap('n', '<leader>ff',
     [[<Cmd>lua require('telescope.builtin').find_files()<CR>]],
     opts)
+set_keymap('n', '<leader>fF',
+    [[<Cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]],
+    opts)
+set_keymap('n', '<leader>fG',
+    [[<Cmd>lua require('telescope.builtin').live_grep({hidden=true})<CR>]],
+    opts)
 set_keymap('n', '<leader>fg',
     [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]],
     opts)

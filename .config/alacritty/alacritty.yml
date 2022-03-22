@@ -104,7 +104,8 @@ window:
 # Font configuration
 font:
   normal:
-    family: SpaceMono Nerd Font Mono
+    family: "MesloLGS NF"
+    #family: SpaceMono Nerd Font Mono
 #font:
   # Normal (roman) font face
   #normal:
