@@ -128,7 +128,7 @@ alias gw="git worktree"
 alias s="spotui"
 alias b="bashtop"
 alias f="fuck"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias t="tmux a -t main || tmux new -s main"
 source ~/.localrc
 
 # >>> conda initialize >>>
