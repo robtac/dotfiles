@@ -13,6 +13,15 @@ end
 vim.g.kommentary_create_default_mappings = false
 
 return require('packer').startup(function(use)
+    -- Completion
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'dcampos/nvim-snippy'
+
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim',
@@ -27,9 +36,6 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
-    -- Autocomplete
-    use 'nvim-lua/completion-nvim'
-
     -- Language specific
     use 'lervag/vimtex'
 
@@ -37,7 +43,16 @@ return require('packer').startup(function(use)
     use 'tpope/vim-dispatch'
 
     -- Typing/Editing
-    use 'b3nj5m1n/kommentary'
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
 
